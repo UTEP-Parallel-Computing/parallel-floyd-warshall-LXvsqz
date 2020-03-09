@@ -1,30 +1,24 @@
-# Parallel-Floyd-Warshall
+More so than any lab we have done, I ran into various problems that were very time consuming
+to get. One big one was that i kept getting an out of bounds error. I don't exactly know why
+though i came to the conclusion that it might have been because the matrix i was testing was
+an m x n matrix instead of an n x n matrix. The pseudocode provided gave me great insight so
+I did not have many issues with the algorithm itself. The report details do no discuss timing
+so i did not list them in the report section. I did analyze them and saw a very small jump in
+in the times for the better. This assignemnt took me about 5-6 hours to complete since i first
+did the serial version and then tried the parallel version. I went about it this way since it
+was the way that i was successful on the first two labs. One point i would like to touch on is
+i believe this lab would be much more fun to do if we had more time to learn about the features
+of MPI. I understand the reason we could not so i just thought i should mention it for future
+reference. To run this program simpy run the file Warshall.py. The information displayed is the
+input array followed by the array that goes through Warshalls algorithm.
 
-For this assignment you will write a parallel all pairs shortest paths 
-algorithm using the Floyd Warshall algorithm. The program will traverse 
-an adjacency matrix and determine the shortest path between each pair 
-of nodes. You should have functions for determining the starting and 
-stopping row for a particular process. 
+dumpCPUInfo.sh Info
 
-https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm
+model name      : Intel(R) Core(TM) i7-8650U CPU @ 1.90GHz
+      4      36     216
 
-fwTest.txt is an example input matrix, the result matrix is fwTestResult.txt
 
-Hints: 
+Thanks for a great half semester David, I really did take away some valuable knowledge from this
+class.
 
-* It may be easier to load the files containing text before entering the processing region 
-* You will have to work out how to break apart the work, otherwise each mpi program will be performing duplicate work 
-* Ideally the rows are split between threads, for example if there are 4 rows and 2 threads thread 0 gets rows 1 and 2 and thread 2 gets 3 and 4
-* Example of a serial floyd warshall https://www-m9.ma.tum.de/graph-algorithms/spp-floyd-warshall/index_en.html
-
-## Requirements 
-
-The code should use reasonable decomposition, use reasonable variable names,
-and should generally follow good coding standards. 
-Important, your assignment should include your name. 
-
-The program shall use the floyd warshal algorithm 
-The program shall use mpi to do the work in parallel 
-The program shall use an adjacency matrix 
-The program shall split work among multiple mpi processes 
-The program shall display a portion of the input and final matrices 
+-Alex 
